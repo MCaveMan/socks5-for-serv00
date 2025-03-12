@@ -9,6 +9,23 @@ jobs:
   execute-commands:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          
+      - name: Modify TXT file
+        run: |
+          echo "自动生成内容 - 时间戳: $(date '+%Y-%m-%d %H:%M:%S')" >> example.txt
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Auto-update TXT file [skip ci]"
+          git push origin main
+          
       - name: Set up SSHPass
         run: sudo apt-get update && sudo apt-get install -y sshpass
 
