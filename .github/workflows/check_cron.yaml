@@ -24,7 +24,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Auto-update TXT file [skip ci]"
-          git remote set-url origin https://MCaveMan:${{ secrets.TOKEN }}@github.com/MCaveMan/andy_public.git
+          git remote set-url origin https://MCaveMan:${{ secrets.TOKEN }}@github.com/MCaveMan/socks5-for-serv00.git
           git push origin main
           
       - name: Set up SSHPass
