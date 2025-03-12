@@ -20,8 +20,6 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@gmail.com"
           git add .
           git commit -m "Auto-update TXT file [skip ci]"
           git push origin main
