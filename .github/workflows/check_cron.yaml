@@ -16,7 +16,7 @@ jobs:
           
       - name: Modify TXT file
         run: |
-          echo "自动生成内容 - 时间戳: $(date '+%Y-%m-%d %H:%M:%S')" >> example.txt
+          echo "自动生成内容 - 时间戳: $(date '+%Y-%m-%d %H:%M:%S')" >> time.txt
 
       - name: Commit changes
         run: |
